@@ -8,9 +8,16 @@ export function NotFoundView() {
 
       <main class="container app-main">
         <section class="hero">
-          <p>Error 404</p>
-          <h1>Página no encontrada</h1>
-          <a class="button" href="/" data-link>Volver al inicio</a>
+          <div>
+            <p class="eyebrow">Error 404</p>
+            <h1>Página no encontrada</h1>
+            <p class="hero-copy">
+              La dirección que intentaste abrir no existe.
+            </p>
+            <a class="button button-primary" href="/" data-link>
+              Volver al inicio
+            </a>
+          </div>
         </section>
       </main>
 

@@ -16,6 +16,7 @@ function resolveRoute(pathname) {
 function navigate(url) {
   window.history.pushState({}, "", url);
   renderCurrentRoute();
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function interceptLinks(event) {

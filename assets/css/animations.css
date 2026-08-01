@@ -1,6 +1,30 @@
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.view-enter { animation: fade-in 260ms ease both; }
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0) rotate(3deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+.view-enter {
+  animation: fade-in 260ms ease both;
+}
+
+.hero-card-main {
+  animation: float-soft 5s ease-in-out infinite;
+}

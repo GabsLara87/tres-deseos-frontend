@@ -2,9 +2,27 @@
 
 Frontend público de la tienda Tres Deseos.
 
+## Estado actual
+
+Layout visual estático completo:
+
+- Header responsive
+- Buscador
+- Hero
+- Categorías
+- Colecciones
+- Productos destacados
+- Novedades
+- Footer
+- Vista de catálogo
+- Router SPA
+- Store central
+- Cliente API preparado
+
 ## Stack
+
 - HTML5
 - CSS3
 - JavaScript ES Modules
-- API pública en Google Apps Script
-- Despliegue previsto en Cloudflare Pages
+- Google Apps Script API
+- Cloudflare Pages
