@@ -167,7 +167,11 @@ export async function mountColeccionDetalleView() {
                 <span class="catalog-count">${pagination.total} ${pagination.total === 1 ? "producto encontrado" : "productos encontrados"}</span>
                 <span class="catalog-count">Página ${pagination.pagina} de ${pagination.totalPaginas}</span>
               </div>
-              <div class="product-grid">${items.map(ProductCard).join("")}</div>
+              <div class="product-grid">
+                ${items
+                  .map((product) => ProductCard(product, { imageLinksToDetail: true }))
+                  .join("")}
+              </div>
               ${paginationMarkup(pagination)}
             ` : `
               <div class="status-card">
