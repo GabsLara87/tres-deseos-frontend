@@ -8,6 +8,7 @@ import { escapeHtml, safeUrl } from "../utils/dom.js";
 import { getAppPathname } from "../utils/appPath.js";
 import { formatPrice } from "../utils/formatter.js";
 import { sanitizeBasicHtml } from "../utils/sanitizeHtml.js";
+import { buildWhatsappConsultUrl } from "../utils/whatsapp.js";
 
 function getSlug() {
   const match = getAppPathname().match(/^\/productos\/([^/]+)\/?$/);
@@ -107,7 +108,7 @@ function attributesMarkup(attributes) {
 
 function renderProduct(product) {
   const safeDescription = sanitizeBasicHtml(product.descripcion);
-  const whatsappUrl = safeUrl(product.consultaWhatsapp?.url);
+  const whatsappUrl = buildWhatsappConsultUrl(product.consultaWhatsapp?.url);
   const stockText = product.disponible ? "Disponible" : "Sin disponibilidad";
 
   return `

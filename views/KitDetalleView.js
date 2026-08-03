@@ -7,6 +7,7 @@ import { escapeHtml, safeUrl } from "../utils/dom.js";
 import { getAppPathname } from "../utils/appPath.js";
 import { formatPrice } from "../utils/formatter.js";
 import { sanitizeBasicHtml } from "../utils/sanitizeHtml.js";
+import { buildWhatsappConsultUrl } from "../utils/whatsapp.js";
 
 function slugActual() {
   const match = getAppPathname().match(/^\/kits\/([^/]+)\/?$/);
@@ -15,7 +16,7 @@ function slugActual() {
 
 function renderKit(kit) {
   const image = safeUrl(kit.imagenPrincipal);
-  const whatsapp = safeUrl(kit.consultaWhatsapp?.url);
+  const whatsapp = buildWhatsappConsultUrl(kit.consultaWhatsapp?.url);
   const hasSaving = Number(kit.ahorro || 0) > 0;
   const products = Array.isArray(kit.productos) ? kit.productos : [];
 
