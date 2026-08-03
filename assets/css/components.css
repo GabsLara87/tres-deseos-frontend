@@ -654,11 +654,14 @@
 
 .kit-components-list {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
 .kit-component-row {
   position: relative;
+  min-width: 0;
 }
 
 .kit-component-quantity {
@@ -676,7 +679,24 @@
 }
 
 .kit-component-card .product-card {
-  max-width: 420px;
+  height: 100%;
+}
+
+.kit-component-card .product-image {
+  min-height: 180px;
+}
+
+.kit-component-card .product-card-body {
+  padding: 0.85rem;
+}
+
+.kit-component-card .product-card h3 {
+  min-height: auto;
+}
+
+.kit-component-card .product-summary {
+  min-height: auto;
+  margin-bottom: 0.7rem;
 }
 
 .compact-kit-grid {
