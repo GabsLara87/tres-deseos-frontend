@@ -1,20 +1,22 @@
 import { escapeHtml, safeUrl } from "../utils/dom.js";
 import { formatPrice } from "../utils/formatter.js";
 
-export function KitCard(kit) {
+export function KitCard(kit, options = {}) {
   const image = safeUrl(kit.imagenPrincipal);
   const url = safeUrl(kit.url, `/kits/${encodeURIComponent(kit.slug || "")}`);
   const hasSaving = Number(kit.ahorro || 0) > 0;
+  const imageMarkup = image
+    ? `<img src="${image}" alt="${escapeHtml(kit.nombre)}" loading="lazy">`
+    : `<span class="product-placeholder">🎁</span>`;
+  const imageControl = options.imageLinksToDetail
+    ? `<a class="kit-image product-image" href="${url}" data-link aria-label="Ver ${escapeHtml(kit.nombre)}">${imageMarkup}</a>`
+    : `<button class="kit-image product-image product-image-button" type="button" data-lightbox-src="${image}" data-lightbox-alt="${escapeHtml(kit.nombre)}" aria-label="Ampliar imagen de ${escapeHtml(kit.nombre)}">${imageMarkup}</button>`;
 
   return `
     <article class="kit-card">
       ${hasSaving ? `<span class="kit-badge">Ahorrás ${escapeHtml(formatPrice({ tipo: "Fijo", valor: kit.ahorro, moneda: kit.precio?.moneda || "ARS" }))}</span>` : `<span class="kit-badge">Kit</span>`}
 
-      <button class="kit-image product-image product-image-button" type="button" data-lightbox-src="${image}" data-lightbox-alt="${escapeHtml(kit.nombre)}" aria-label="Ampliar imagen de ${escapeHtml(kit.nombre)}">
-        ${image
-          ? `<img src="${image}" alt="${escapeHtml(kit.nombre)}" loading="lazy">`
-          : `<span class="product-placeholder">🎁</span>`}
-      </button>
+      ${imageControl}
 
       <div class="kit-card-body">
         <p class="product-category">${Number(kit.cantidadUnidades || kit.cantidadProductos || 0)} productos incluidos</p>

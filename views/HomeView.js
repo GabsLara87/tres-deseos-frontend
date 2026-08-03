@@ -36,7 +36,7 @@ function renderProductsSection({
       })}
 
       <div class="product-grid">
-        ${items.map(ProductCard).join("")}
+        ${items.map((product) => ProductCard(product, { imageLinksToDetail: true })).join("")}
       </div>
     </section>
   `;
@@ -166,7 +166,7 @@ export function HomeView() {
                     description: "Combinaciones listas para resolver tu pedido y aprovechar un mejor precio.",
                     href: "/kits",
                   })}
-                  <div class="kit-grid">${kits.map(KitCard).join("")}</div>
+                  <div class="kit-grid">${kits.map((kit) => KitCard(kit, { imageLinksToDetail: true })).join("")}</div>
                 </section>`
               : ""
           }
