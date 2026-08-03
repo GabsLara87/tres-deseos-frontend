@@ -1,6 +1,6 @@
 /**
  * Rutas lógicas conservadas para no modificar Stores ni Views.
- * apiClient.js las resuelve contra data/catalogo.json.
+ * apiClient.js las resuelve contra el catalogo.json del repositorio tres-deseos-data.
  */
 export const API_BASE_URL = "https://datos.tres-deseos.local/api/v1";
 

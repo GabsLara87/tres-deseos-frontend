@@ -1,6 +1,4 @@
-import { APP_BASE_PATH } from "../utils/appPath.js";
-
-const CATALOG_URL = `${APP_BASE_PATH}/data/catalogo.json` || "/data/catalogo.json";
+const CATALOG_URL = "https://gabslara87.github.io/tres-deseos-data/catalogo.json";
 const API_PREFIX = "/api/v1/";
 
 let cachedCatalog = null;
