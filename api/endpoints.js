@@ -1,5 +1,8 @@
-export const API_BASE_URL =
-  "https://script.google.com/macros/s/AKfycbxsD-zNiSYm1RRnzFIkQQa9J3bIBHgb52ZGDTRDVFRavLjDOiOcx1sapRFuDuRemCi_/exec/api/v1";
+/**
+ * Rutas lógicas conservadas para no modificar Stores ni Views.
+ * apiClient.js las resuelve contra data/catalogo.json.
+ */
+export const API_BASE_URL = "https://datos.tres-deseos.local/api/v1";
 
 export const endpoints = Object.freeze({
   versiones: `${API_BASE_URL}/versiones`,
