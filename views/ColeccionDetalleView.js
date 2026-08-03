@@ -5,6 +5,7 @@ import { collectionStore } from "../store/collectionStore.js";
 import { store } from "../store/store.js";
 import { escapeHtml, safeUrl } from "../utils/dom.js";
 import { sanitizeHtml } from "../utils/sanitizeHtml.js";
+import { getAppPathname, pushAppState } from "../utils/appPath.js";
 
 const ORDER_OPTIONS = [
   ["predeterminado", "Orden predeterminado"],
@@ -16,7 +17,7 @@ const ORDER_OPTIONS = [
 ];
 
 function getSlug() {
-  const parts = window.location.pathname.split("/").filter(Boolean);
+  const parts = getAppPathname().split("/").filter(Boolean);
   return decodeURIComponent(parts[1] || "");
 }
 
@@ -42,7 +43,7 @@ function updateUrl(slug, filters) {
   });
 
   const query = params.toString();
-  window.history.pushState({}, "", `/colecciones/${encodeURIComponent(slug)}${query ? `?${query}` : ""}`);
+  pushAppState(`/colecciones/${encodeURIComponent(slug)}${query ? `?${query}` : ""}`);
 }
 
 function paginationMarkup(pagination) {

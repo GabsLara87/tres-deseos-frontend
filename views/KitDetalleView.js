@@ -4,11 +4,12 @@ import { ProductCard } from "../components/ProductCard.js";
 import { kitStore } from "../store/kitStore.js";
 import { store } from "../store/store.js";
 import { escapeHtml, safeUrl } from "../utils/dom.js";
+import { getAppPathname } from "../utils/appPath.js";
 import { formatPrice } from "../utils/formatter.js";
 import { sanitizeBasicHtml } from "../utils/sanitizeHtml.js";
 
 function slugActual() {
-  const match = window.location.pathname.match(/^\/kits\/([^/]+)\/?$/);
+  const match = getAppPathname().match(/^\/kits\/([^/]+)\/?$/);
   return match ? decodeURIComponent(match[1]) : "";
 }
 

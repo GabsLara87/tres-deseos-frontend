@@ -6,17 +6,26 @@
   <meta name="description" content="Tienda pública de Tres Deseos">
   <title>Tres Deseos</title>
 
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/variables.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/animations.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
-  <link rel="stylesheet" href="/assets/css/mobile-menu.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <link rel="stylesheet" href="./assets/css/mobile-menu.css">
+
+  <script>
+    (function () {
+      const savedRoute = sessionStorage.getItem("github-pages-spa-route");
+      if (!savedRoute) return;
+      sessionStorage.removeItem("github-pages-spa-route");
+      window.history.replaceState({}, "", savedRoute);
+    })();
+  </script>
 </head>
 <body>
   <noscript>Esta tienda necesita JavaScript para funcionar.</noscript>
   <div id="app" aria-live="polite"></div>
-  <script type="module" src="/assets/js/app.js"></script>
+  <script type="module" src="./assets/js/app.js"></script>
 </body>
 </html>

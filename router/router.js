@@ -7,6 +7,7 @@ import { ColeccionDetalleView, mountColeccionDetalleView } from "../views/Colecc
 import { KitsView, mountKitsView } from "../views/KitsView.js";
 import { KitDetalleView, mountKitDetalleView } from "../views/KitDetalleView.js";
 import { NotFoundView } from "../views/NotFoundView.js";
+import { getAppPathname, normalizeAppLinks, toAppUrl } from "../utils/appPath.js";
 
 const routes = [
   { pattern: /^\/$/, render: HomeView },
@@ -27,7 +28,7 @@ function resolveRoute(pathname) {
 
 function navigate(url) {
   const target = new URL(url, window.location.origin);
-  window.history.pushState({}, "", `${target.pathname}${target.search}${target.hash}`);
+  window.history.pushState({}, "", toAppUrl(`${target.pathname}${target.search}${target.hash}`));
   renderCurrentRoute();
 
   if (!target.hash) {
@@ -69,8 +70,9 @@ function interceptSearch(event) {
 
 function renderCurrentRoute() {
   const app = document.querySelector("#app");
-  const route = resolveRoute(window.location.pathname);
+  const route = resolveRoute(getAppPathname());
   app.innerHTML = route.render();
+  normalizeAppLinks(app);
 
   if (typeof route.mount === "function") {
     route.mount();

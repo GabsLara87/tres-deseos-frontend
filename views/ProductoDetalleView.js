@@ -5,11 +5,12 @@ import { KitCard } from "../components/KitCard.js";
 import { productDetailStore } from "../store/productDetailStore.js";
 import { store } from "../store/store.js";
 import { escapeHtml, safeUrl } from "../utils/dom.js";
+import { getAppPathname } from "../utils/appPath.js";
 import { formatPrice } from "../utils/formatter.js";
 import { sanitizeBasicHtml } from "../utils/sanitizeHtml.js";
 
 function getSlug() {
-  const match = window.location.pathname.match(/^\/productos\/([^/]+)\/?$/);
+  const match = getAppPathname().match(/^\/productos\/([^/]+)\/?$/);
   return match ? decodeURIComponent(match[1]) : "";
 }
 

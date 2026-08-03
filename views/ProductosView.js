@@ -4,6 +4,7 @@ import { ProductCard } from "../components/ProductCard.js";
 import { catalogStore } from "../store/catalogStore.js";
 import { store } from "../store/store.js";
 import { escapeHtml } from "../utils/dom.js";
+import { pushAppState } from "../utils/appPath.js";
 
 const ORDER_OPTIONS = [
   ["predeterminado", "Orden predeterminado"],
@@ -70,7 +71,7 @@ function updateUrl(filters) {
   });
 
   const query = params.toString();
-  window.history.pushState({}, "", `/productos${query ? `?${query}` : ""}`);
+  pushAppState(`/productos${query ? `?${query}` : ""}`);
 }
 
 export function ProductosView() {

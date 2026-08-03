@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirigiendo…</title>
+</head>
+<body>
+  <script>
+    (function () {
+      const parts = window.location.pathname.split("/").filter(Boolean);
+      const isGithubProject = window.location.hostname.endsWith("github.io") && parts.length > 0;
+      const basePath = isGithubProject ? `/${parts[0]}/` : "/";
+      const route = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+      sessionStorage.setItem("github-pages-spa-route", route);
+      window.location.replace(basePath);
+    })();
+  </script>
+</body>
+</html>
