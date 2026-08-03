@@ -3,151 +3,193 @@ import { Footer } from "../components/Footer.js";
 import { CategoryCard } from "../components/CategoryCard.js";
 import { CollectionCard } from "../components/CollectionCard.js";
 import { ProductCard } from "../components/ProductCard.js";
+import { KitCard } from "../components/KitCard.js";
 import { SectionHeader } from "../components/SectionHeader.js";
+import { HomeSkeleton } from "../components/HomeSkeleton.js";
+import { homeStore } from "../store/homeStore.js";
+import { escapeHtml, safeUrl } from "../utils/dom.js";
 
-const categories = [
-  { icon: "🎉", name: "Banderines", count: 12 },
-  { icon: "📒", name: "Agendas", count: 8 },
-  { icon: "📸", name: "Fotografías", count: 6 },
-  { icon: "✨", name: "Personalizados", count: 14 },
-];
+function sectionItems(section) {
+  return Array.isArray(section?.items) ? section.items : [];
+}
 
-const collections = [
-  { name: "Día del Niño", description: "Regalos y detalles especiales" },
-  { name: "Cumpleaños", description: "Decoración para celebrar" },
-  { name: "Momentos únicos", description: "Recuerdos personalizados" },
-];
+function renderProductsSection({
+  section,
+  eyebrow,
+  title,
+  description,
+  fallbackUrl,
+}) {
+  const items = sectionItems(section);
 
-const products = [
-  {
-    badge: "Nuevo",
-    emoji: "🎊",
-    category: "Banderines",
-    name: "Banderín personalizado",
-    summary: "Ideal para decorar cumpleaños y celebraciones.",
-    price: "$ 10.000",
-  },
-  {
-    emoji: "📔",
-    category: "Agendas",
-    name: "Agenda 2027",
-    summary: "Organización diaria con diseño personalizado.",
-    price: "$ 20.000",
-  },
-  {
-    badge: "Destacado",
-    emoji: "📷",
-    category: "Fotografías",
-    name: "Fotitos Polaroid",
-    summary: "Tus mejores recuerdos impresos con estilo.",
-    price: "$ 6.000",
-  },
-  {
-    emoji: "⭐",
-    category: "Personalizados",
-    name: "Kit para regalar",
-    summary: "Una combinación pensada para sorprender.",
-    price: "Consultar",
-  },
-];
+  if (!items.length) {
+    return "";
+  }
+
+  return `
+    <section class="section">
+      ${SectionHeader({
+        eyebrow,
+        title,
+        description,
+        href: safeUrl(section?.url, fallbackUrl),
+      })}
+
+      <div class="product-grid">
+        ${items.map(ProductCard).join("")}
+      </div>
+    </section>
+  `;
+}
 
 export function HomeView() {
+  const home = homeStore.get();
+
+  if (!home) {
+    return HomeSkeleton();
+  }
+
+  const tienda = home.tienda ?? {};
+  const negocio = tienda.negocio ?? {};
+  const identidad = tienda.identidad ?? {};
+  const contacto = tienda.contacto ?? {};
+
+  const categories = sectionItems(home.categorias);
+  const collections = sectionItems(home.colecciones);
+  const kits = sectionItems(home.kits);
+  const whatsappUrl = safeUrl(contacto.whatsapp?.urlBase);
+  const coverUrl = safeUrl(identidad.portadaUrl);
+  const heroStyle = coverUrl
+    ? `style="--hero-cover: url('${coverUrl}')"`
+    : "";
+
   return `
     <div class="app-shell view-enter">
-      ${Header("inicio")}
+      ${Header("inicio", tienda)}
 
       <main class="container app-main">
         <div class="home-stack">
-          <section class="hero">
-            <div>
-              <p class="eyebrow">Creaciones con identidad</p>
-              <h1>Tus ideas convertidas en algo único.</h1>
-              <p class="hero-copy">
-                Descubrí productos personalizados, detalles para regalar y
-                propuestas pensadas para acompañar momentos especiales.
-              </p>
+          <section class="hero ${coverUrl ? "hero-with-cover" : ""}" ${heroStyle}>
+            <div class="hero-content">
+              <p class="eyebrow">${escapeHtml(negocio.eslogan || "Creaciones con identidad")}</p>
+              <h1>${escapeHtml(negocio.nombre || "Tres Deseos")}</h1>
+
+              ${
+                negocio.descripcion
+                  ? `<p class="hero-copy">${escapeHtml(negocio.descripcion)}</p>`
+                  : ""
+              }
 
               <div class="hero-actions">
                 <a class="button button-primary" href="/productos" data-link>
                   Explorar productos
                 </a>
 
-                <a class="button button-secondary" href="#contacto">
-                  Consultar por WhatsApp
-                </a>
+                ${
+                  whatsappUrl
+                    ? `<a class="button button-secondary" href="${whatsappUrl}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>`
+                    : ""
+                }
               </div>
             </div>
 
-            <div class="hero-visual" aria-hidden="true">
-              <article class="hero-card hero-card-main">
-                <div class="hero-card-image">🎁</div>
-                <div class="hero-card-body">
-                  <p>Creación destacada</p>
-                  <strong>Diseños personalizados</strong>
-                </div>
-              </article>
+            ${
+              coverUrl
+                ? `<div class="hero-cover" aria-hidden="true"></div>`
+                : `
+                  <div class="hero-visual" aria-hidden="true">
+                    <article class="hero-card hero-card-main">
+                      <div class="hero-card-image">🎁</div>
+                      <div class="hero-card-body">
+                        <p>Creación destacada</p>
+                        <strong>Diseños personalizados</strong>
+                      </div>
+                    </article>
 
-              <article class="hero-card hero-card-small">
-                <div class="hero-card-image">✨</div>
-                <div class="hero-card-body">
-                  <strong>Hecho con dedicación</strong>
-                </div>
-              </article>
-            </div>
+                    <article class="hero-card hero-card-small">
+                      <div class="hero-card-image">✨</div>
+                      <div class="hero-card-body">
+                        <strong>Hecho con dedicación</strong>
+                      </div>
+                    </article>
+                  </div>
+                `
+            }
           </section>
 
-          <section class="section">
-            ${SectionHeader({
-              eyebrow: "Explorá",
-              title: "Categorías",
-              description: "Encontrá rápidamente el tipo de producto que estás buscando.",
-            })}
+          ${
+            categories.length
+              ? `
+                <section class="section">
+                  ${SectionHeader({
+                    eyebrow: "Explorá",
+                    title: "Categorías",
+                    description: "Encontrá rápidamente el tipo de producto que estás buscando.",
+                    href: "/productos",
+                    showMore: false,
+                  })}
 
-            <div class="category-grid">
-              ${categories.map(CategoryCard).join("")}
-            </div>
-          </section>
+                  <div class="category-grid">
+                    ${categories.map(CategoryCard).join("")}
+                  </div>
+                </section>
+              `
+              : ""
+          }
 
-          <section class="section">
-            ${SectionHeader({
-              eyebrow: "Ideas para cada ocasión",
-              title: "Colecciones",
-              description: "Propuestas agrupadas para descubrir productos que combinan entre sí.",
-            })}
+          ${
+            collections.length
+              ? `
+                <section class="section">
+                  ${SectionHeader({
+                    eyebrow: "Ideas para cada ocasión",
+                    title: "Temáticas",
+                    description: "Encontrá productos agrupados por personaje, ocasión o estilo.",
+                    href: safeUrl(home.colecciones?.url, "/productos"),
+                  })}
 
-            <div class="collection-grid">
-              ${collections.map(CollectionCard).join("")}
-            </div>
-          </section>
+                  <div class="collection-grid">
+                    ${collections.map(CollectionCard).join("")}
+                  </div>
+                </section>
+              `
+              : ""
+          }
 
-          <section class="section">
-            ${SectionHeader({
-              eyebrow: "Elegidos",
-              title: "Productos destacados",
-              description: "Algunas de las creaciones favoritas de la tienda.",
-              href: "/productos?destacados=true",
-            })}
+          ${
+            kits.length
+              ? `
+                <section class="section home-kits-section">
+                  ${SectionHeader({
+                    eyebrow: "Llevate todo junto",
+                    title: "Kits recomendados",
+                    description: "Combinaciones listas para resolver tu pedido y aprovechar un mejor precio.",
+                    href: "/kits",
+                  })}
+                  <div class="kit-grid">${kits.map(KitCard).join("")}</div>
+                </section>`
+              : ""
+          }
 
-            <div class="product-grid">
-              ${products.map(ProductCard).join("")}
-            </div>
-          </section>
+          ${renderProductsSection({
+            section: home.productosDestacados,
+            eyebrow: "Elegidos",
+            title: "Productos destacados",
+            description: "Algunas de las creaciones favoritas de la tienda.",
+            fallbackUrl: "/productos?destacados=true",
+          })}
 
-          <section class="section">
-            ${SectionHeader({
-              eyebrow: "Recién llegados",
-              title: "Novedades",
-              description: "Los últimos productos incorporados al catálogo.",
-            })}
-
-            <div class="product-grid">
-              ${products.slice().reverse().map(ProductCard).join("")}
-            </div>
-          </section>
+          ${renderProductsSection({
+            section: home.novedades,
+            eyebrow: "Recién llegados",
+            title: "Novedades",
+            description: "Los últimos productos incorporados al catálogo.",
+            fallbackUrl: "/productos",
+          })}
         </div>
       </main>
 
-      ${Footer()}
+      ${Footer(tienda)}
     </div>
   `;
 }

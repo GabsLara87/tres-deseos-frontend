@@ -1,5 +1,13 @@
 body {
-  background: var(--color-background);
+  background:
+    radial-gradient(circle at 8% 8%, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 30rem),
+    radial-gradient(circle at 92% 34%, color-mix(in srgb, var(--color-primary) 7%, transparent), transparent 34rem),
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--color-primary) 4%, var(--color-background)),
+      var(--color-background) 32%,
+      color-mix(in srgb, var(--color-primary) 3%, var(--color-background))
+    );
+  background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-family);
 }
@@ -44,6 +52,27 @@ body {
 
 .app-main {
   padding-block: 2rem 4rem;
+}
+
+.home-stack > .section,
+.catalog-layout,
+.product-detail-block {
+  position: relative;
+}
+
+.home-stack > .section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -1.25rem -1.5rem;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-radius: calc(var(--radius-lg) + 0.35rem);
+  background: color-mix(in srgb, var(--color-primary) 3.5%, var(--color-surface));
+  box-shadow: 0 16px 50px rgba(var(--color-text-rgb), 0.035);
+}
+
+.home-stack > .section:nth-of-type(even)::before {
+  background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
 }
 
 .home-stack {
@@ -125,7 +154,7 @@ body {
 .app-footer {
   margin-top: 3rem;
   border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
+  background: color-mix(in srgb, var(--color-primary) 4%, var(--color-surface));
 }
 
 .footer-grid {
@@ -139,4 +168,95 @@ body {
   padding-block: 1rem 1.5rem;
   border-top: 1px solid var(--color-border);
   color: var(--color-text-soft);
+}
+
+/* =========================================================
+   Identidad visual con mayor presencia de la paleta activa
+   ========================================================= */
+
+.app-header {
+  border-bottom-color: color-mix(in srgb, var(--color-primary) 28%, var(--color-border));
+  box-shadow: 0 10px 34px color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
+
+.header-bottom {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-primary) 8%, var(--color-surface)),
+    var(--color-surface) 48%,
+    color-mix(in srgb, var(--color-primary) 8%, var(--color-surface))
+  );
+}
+
+/* La sección de colecciones funciona como bloque de color principal. */
+.home-stack > .section:has(> .collection-grid) {
+  isolation: isolate;
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+  border-radius: calc(var(--radius-lg) + 0.25rem);
+}
+
+.home-stack > .section:has(> .collection-grid)::before {
+  inset: 0;
+  border-color: color-mix(in srgb, var(--color-primary) 72%, transparent);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.18), transparent 24rem),
+    linear-gradient(135deg, var(--color-primary-rich), var(--color-primary-deep));
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--color-primary-dark) 26%, transparent);
+}
+
+.home-stack > .section:has(> .collection-grid) .section-title,
+.home-stack > .section:has(> .collection-grid) .section-description,
+.home-stack > .section:has(> .collection-grid) .eyebrow,
+.home-stack > .section:has(> .collection-grid) .link-more {
+  color: white;
+}
+
+.home-stack > .section:has(> .collection-grid) .section-description {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.home-stack > .section:has(> .collection-grid) .eyebrow {
+  opacity: 0.86;
+}
+
+.home-stack > .section:has(> .collection-grid) .link-more {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.app-footer {
+  position: relative;
+  overflow: hidden;
+  border-top: 0;
+  color: white;
+  background:
+    radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--color-primary) 58%, transparent), transparent 28rem),
+    linear-gradient(135deg, var(--color-primary-deep), color-mix(in srgb, var(--color-primary-dark) 58%, #111522));
+  box-shadow: 0 -18px 50px color-mix(in srgb, var(--color-primary-dark) 15%, transparent);
+}
+
+.app-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+.footer-grid,
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.72);
 }

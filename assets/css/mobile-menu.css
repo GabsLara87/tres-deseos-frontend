@@ -1,0 +1,170 @@
+/*
+ * Navegación responsive con menú hamburguesa.
+ * Este archivo se carga después de responsive.css para prevalecer
+ * sobre las reglas antiguas que generaban desplazamiento horizontal.
+ */
+
+.mobile-nav-checkbox,
+.mobile-nav-toggle {
+  display: none;
+}
+
+.header-bottom-inner {
+  overflow: visible;
+  scrollbar-width: none;
+}
+
+.header-bottom-inner::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .app-header {
+    overflow: visible;
+  }
+
+  .header-top {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-copy {
+    min-width: 0;
+  }
+
+  .brand-copy > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-actions {
+    gap: 0.45rem;
+  }
+
+  .mobile-nav-toggle {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 5px;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--color-text);
+    background: var(--color-surface);
+    transition:
+      border-color var(--transition-fast),
+      background var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .mobile-nav-toggle:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+  }
+
+  .mobile-nav-toggle span {
+    width: 19px;
+    height: 2px;
+    display: block;
+    border-radius: var(--radius-pill);
+    background: currentColor;
+    transform-origin: center;
+    transition:
+      transform var(--transition-fast),
+      opacity var(--transition-fast);
+  }
+
+  .header-bottom {
+    max-height: 0;
+    overflow: hidden;
+    border-top-color: transparent;
+    background: color-mix(in srgb, var(--color-surface) 97%, var(--color-secondary));
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      max-height 260ms ease,
+      opacity 180ms ease,
+      visibility 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .header-bottom-inner {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+    padding-block: 0.75rem 1rem;
+    overflow: visible;
+  }
+
+  .header-bottom .nav-link {
+    width: 100%;
+    min-width: 0;
+    padding: 0.85rem 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md, 0.9rem);
+  }
+
+  .header-bottom .nav-link:hover,
+  .header-bottom .nav-link[aria-current="page"] {
+    color: var(--color-primary-text);
+    border-color: color-mix(in srgb, var(--color-primary) 72%, transparent);
+    background: var(--color-primary);
+  }
+
+  .mobile-nav-checkbox:checked ~ .header-bottom {
+    max-height: 420px;
+    border-top-color: var(--color-border);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-nav-checkbox:checked ~ .header-top .mobile-nav-toggle {
+    color: var(--color-primary-text);
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+  }
+
+  .mobile-nav-checkbox:checked ~ .header-top .mobile-nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-nav-checkbox:checked ~ .header-top .mobile-nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-nav-checkbox:checked ~ .header-top .mobile-nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .favorite-button {
+    display: none;
+  }
+
+  .header-top {
+    gap: 0.55rem;
+  }
+
+  .brand-logo,
+  .brand-mark {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  .icon-button,
+  .mobile-nav-toggle {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+}

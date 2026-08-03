@@ -1,5 +1,6 @@
 const state = {
   appReady: false,
+  home: null,
   configuracion: null,
   categorias: [],
   colecciones: [],

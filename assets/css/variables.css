@@ -2,11 +2,15 @@
   --color-primary: #6c63ff;
   --color-primary-dark: #554fd1;
   --color-primary-text: #ffffff;
+  --color-primary-rgb: 108, 99, 255;
   --color-secondary: #f0efff;
   --color-background: #fafaff;
   --color-surface: #ffffff;
+  --color-surface-soft: color-mix(in srgb, var(--color-primary) 5%, var(--color-surface));
+  --color-surface-strong: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface));
   --color-sidebar: #25263a;
   --color-text: #242536;
+  --color-text-rgb: 36, 37, 54;
   --color-text-soft: #717386;
   --color-border: #e8e8f1;
   --color-success: #2f9e65;
@@ -25,4 +29,12 @@
   --container-width: 1240px;
   --transition-fast: 180ms ease;
   --transition-normal: 260ms ease;
+}
+
+/* Acentos de mayor contraste derivados automáticamente del tema activo */
+:root {
+  --color-primary-deep: color-mix(in srgb, var(--color-primary-dark) 82%, #10131c);
+  --color-primary-rich: color-mix(in srgb, var(--color-primary) 88%, var(--color-primary-dark));
+  --color-primary-wash: color-mix(in srgb, var(--color-primary) 14%, var(--color-surface));
+  --color-primary-band: color-mix(in srgb, var(--color-primary) 24%, var(--color-surface));
 }
