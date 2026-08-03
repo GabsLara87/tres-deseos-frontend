@@ -1,0 +1,1065 @@
+{
+  "schemaVersion": 1,
+  "publicadoEn": "2026-08-03T13:52:41.667Z",
+  "versiones": {
+    "Configuracion": 14,
+    "Categorias": 9,
+    "Colecciones": 8,
+    "Productos": 100,
+    "Modalidades": 25,
+    "Imagenes": 69,
+    "Kits": 43,
+    "CamposPersonalizados": 1,
+    "ValoresAtributos": 25
+  },
+  "configuracion": {
+    "negocio": {
+      "nombre": "Tres Deseos",
+      "eslogan": "Tus ideas, mis creaciones",
+      "descripcion": "",
+      "moneda": "ARS"
+    },
+    "contacto": {
+      "whatsapp": {
+        "numero": "542932519421",
+        "urlBase": "https://wa.me/542932519421",
+        "plantillaProducto": "Hola, quisiera consultar por {producto} (referencia: {slug})."
+      },
+      "email": "gabrielitolara87@gmail.com",
+      "direccion": "Ushuaia",
+      "horarios": "Todos los días 24hs."
+    },
+    "redes": {
+      "instagram": "https://www.instagram.com/tresd3seos.pa",
+      "facebook": "",
+      "tiktok": ""
+    },
+    "identidad": {
+      "logoUrl": "https://drive.google.com/thumbnail?id=1lgiyI6ocG6YGSwr3tRQhu9vtQEN7CYsA&sz=w800",
+      "faviconUrl": "",
+      "portadaUrl": "https://drive.google.com/thumbnail?id=1uA3REmi-dX5Iku_U2GPF55NX04G45WXc&sz=w1600"
+    },
+    "apariencia": {
+      "colorBase": "#0086B3",
+      "esPersonalizado": true,
+      "versionPaleta": 1,
+      "tema": {
+        "id": "personalizado",
+        "nombre": "Personalizado",
+        "descripcion": "Identidad visual personalizada.",
+        "esPersonalizado": true,
+        "colorBase": "#0086B3",
+        "colores": {
+          "primary": "#0086B3",
+          "primaryDark": "#006E93",
+          "primaryText": "#FFFFFF",
+          "secondary": "#DBEEF4",
+          "background": "#F2F9FB",
+          "surface": "#FFFFFF",
+          "sidebar": "#002B39",
+          "text": "#00202B",
+          "border": "#C7E4EE"
+        }
+      }
+    }
+  },
+  "inicio": {
+    "tienda": {
+      "negocio": {
+        "nombre": "Tres Deseos",
+        "eslogan": "Tus ideas, mis creaciones",
+        "descripcion": "",
+        "moneda": "ARS"
+      },
+      "identidad": {
+        "logoUrl": "https://drive.google.com/thumbnail?id=1lgiyI6ocG6YGSwr3tRQhu9vtQEN7CYsA&sz=w800",
+        "faviconUrl": "",
+        "portadaUrl": "https://drive.google.com/thumbnail?id=1uA3REmi-dX5Iku_U2GPF55NX04G45WXc&sz=w1600"
+      },
+      "apariencia": {
+        "colorBase": "#0086B3",
+        "esPersonalizado": true,
+        "versionPaleta": 1,
+        "tema": {
+          "id": "personalizado",
+          "nombre": "Personalizado",
+          "descripcion": "Identidad visual personalizada.",
+          "esPersonalizado": true,
+          "colorBase": "#0086B3",
+          "colores": {
+            "primary": "#0086B3",
+            "primaryDark": "#006E93",
+            "primaryText": "#FFFFFF",
+            "secondary": "#DBEEF4",
+            "background": "#F2F9FB",
+            "surface": "#FFFFFF",
+            "sidebar": "#002B39",
+            "text": "#00202B",
+            "border": "#C7E4EE"
+          }
+        }
+      },
+      "contacto": {
+        "whatsapp": {
+          "numero": "542932519421",
+          "urlBase": "https://wa.me/542932519421",
+          "plantillaProducto": "Hola, quisiera consultar por {producto} (referencia: {slug})."
+        },
+        "email": "gabrielitolara87@gmail.com",
+        "direccion": "Ushuaia",
+        "horarios": "Todos los días 24hs."
+      },
+      "redes": {
+        "instagram": "https://www.instagram.com/tresd3seos.pa",
+        "facebook": "",
+        "tiktok": ""
+      }
+    },
+    "categorias": {
+      "items": [
+        {
+          "id": "CAT-6A526F82-1785157573000",
+          "slug": "banderines",
+          "nombre": "Banderines",
+          "descripcion": "",
+          "icono": "🎉",
+          "imagen": "https://drive.google.com/thumbnail?id=1DVX7Oi0kMWvr7cEM_p3tRwlgxe1zZF6V&sz=w900",
+          "categoriaPadre": null,
+          "cantidadProductos": 4,
+          "orden": 1
+        }
+      ],
+      "total": 1,
+      "url": "/categorias"
+    },
+    "colecciones": {
+      "items": [
+        {
+          "id": "da3e57c0-f265-483b-a6ce-0c5c3cf2a601",
+          "slug": "dia-del-nino",
+          "nombre": "Día del Niño",
+          "descripcion": "Por pedido hasta el 10 de agosto.",
+          "imagen": "https://drive.google.com/thumbnail?id=1xu_y84q_h8bnwj2h9z4-lrgUD1bct98H&sz=w900",
+          "cantidadProductos": 1,
+          "url": "/colecciones/dia-del-nino"
+        },
+        {
+          "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+          "slug": "ofertas",
+          "nombre": "Ofertas",
+          "descripcion": "Valido hasta 31 de diciembre del 2030",
+          "imagen": "https://drive.google.com/thumbnail?id=1SEqOdvWdYMqQrWH_wIDwM74oo_t9sCr1&sz=w900",
+          "cantidadProductos": 3,
+          "url": "/colecciones/ofertas"
+        }
+      ],
+      "total": 2,
+      "url": "/colecciones"
+    },
+    "kits": {
+      "items": [
+        {
+          "id": "0d82c1a9-6e4d-4c42-82a6-86bb0a2f1bfd",
+          "slug": "kit-banderines",
+          "nombre": "Kit banderines",
+          "resumen": "Promo 3x2",
+          "imagenPrincipal": "https://drive.google.com/thumbnail?id=1bznQ5eN5-gUrsUOwbTkuLYw3HYj091vs&sz=w900",
+          "precio": {
+            "tipo": "Fijo",
+            "valor": 22000,
+            "moneda": "ARS"
+          },
+          "precioOriginal": 22000,
+          "ahorro": 0,
+          "porcentajeAhorro": 0,
+          "disponible": false,
+          "stock": 0,
+          "cantidadProductos": 2,
+          "cantidadUnidades": 2,
+          "url": "/kits/kit-banderines"
+        }
+      ],
+      "total": 1,
+      "url": "/kits"
+    },
+    "productosDestacados": {
+      "items": [],
+      "paginacion": {
+        "pagina": 1,
+        "porPagina": 8,
+        "total": 0,
+        "totalPaginas": 0,
+        "tieneAnterior": false,
+        "tieneSiguiente": false,
+        "anteriorUrl": null,
+        "siguienteUrl": null
+      },
+      "filtros": {
+        "buscar": null,
+        "categoria": null,
+        "coleccion": null,
+        "destacados": true,
+        "orden": "destacados"
+      },
+      "url": "/productos?destacados=true",
+      "anteriorUrl": null,
+      "siguienteUrl": null
+    },
+    "novedades": {
+      "items": [
+        {
+          "id": "4a300f9a-05f7-4c07-ae80-4d0d5ca2105a",
+          "slug": "banderin-animalitos-del-bosque",
+          "nombre": "Banderin Animalitos del Bosque",
+          "resumen": "Banderin Nombre",
+          "precio": {
+            "tipo": "Fijo",
+            "valor": 9500,
+            "moneda": "ARS"
+          },
+          "stock": null,
+          "destacado": false,
+          "orden": 0,
+          "categoria": {
+            "id": "CAT-6A526F82-1785157573000",
+            "nombre": "Banderines",
+            "slug": "banderines",
+            "url": "/categorias/banderines"
+          },
+          "imagenPrincipal": null
+        },
+        {
+          "id": "9c55bc26-2712-44cc-8016-97a8eca0dea2",
+          "slug": "banderin-boca-juniors",
+          "nombre": "Banderin Boca Juniors",
+          "resumen": "Banderin con nombre",
+          "precio": {
+            "tipo": "Fijo",
+            "valor": 9500,
+            "moneda": "ARS"
+          },
+          "stock": null,
+          "destacado": false,
+          "orden": 1,
+          "categoria": {
+            "id": "CAT-6A526F82-1785157573000",
+            "nombre": "Banderines",
+            "slug": "banderines",
+            "url": "/categorias/banderines"
+          },
+          "imagenPrincipal": "https://drive.google.com/thumbnail?id=1vpK-U85X7-75Osi90ABYjDveOnxSfjNG&sz=w900"
+        },
+        {
+          "id": "7578328d-ec81-4349-9d3e-b27e501d5773",
+          "slug": "banderin-la-granja-de-zenon",
+          "nombre": "Banderin La Granja de Zenón",
+          "resumen": "Banderin Feliz cumple personalizado.",
+          "precio": {
+            "tipo": "Fijo",
+            "valor": 12500,
+            "moneda": "ARS"
+          },
+          "stock": null,
+          "destacado": false,
+          "orden": 3,
+          "categoria": {
+            "id": "CAT-6A526F82-1785157573000",
+            "nombre": "Banderines",
+            "slug": "banderines",
+            "url": "/categorias/banderines"
+          },
+          "imagenPrincipal": "https://drive.google.com/thumbnail?id=17BGS_H13h6UzCYCaaBxvfsKgUS2DYchN&sz=w900"
+        },
+        {
+          "id": "7dfbc803-7e72-4530-a4aa-434f5e68c6fb",
+          "slug": "banderin-la-granja",
+          "nombre": "Banderin La Granja 🐷",
+          "resumen": "Banderin personalizado color pastel.",
+          "precio": {
+            "tipo": "Fijo",
+            "valor": 12500,
+            "moneda": "ARS"
+          },
+          "stock": null,
+          "destacado": false,
+          "orden": 11,
+          "categoria": {
+            "id": "CAT-6A526F82-1785157573000",
+            "nombre": "Banderines",
+            "slug": "banderines",
+            "url": "/categorias/banderines"
+          },
+          "imagenPrincipal": "https://drive.google.com/thumbnail?id=1p9LjJ9HWLqmxOImUwvZgcEFy4TKSZYf-&sz=w900"
+        }
+      ],
+      "paginacion": {
+        "pagina": 1,
+        "porPagina": 8,
+        "total": 4,
+        "totalPaginas": 1,
+        "tieneAnterior": false,
+        "tieneSiguiente": false,
+        "anteriorUrl": null,
+        "siguienteUrl": null
+      },
+      "filtros": {
+        "buscar": null,
+        "categoria": null,
+        "coleccion": null,
+        "destacados": null,
+        "orden": "predeterminado"
+      },
+      "url": "/productos",
+      "anteriorUrl": null,
+      "siguienteUrl": null
+    }
+  },
+  "categorias": [
+    {
+      "id": "CAT-6A526F82-1785157573000",
+      "slug": "banderines",
+      "nombre": "Banderines",
+      "descripcion": "",
+      "icono": "🎉",
+      "imagen": "https://drive.google.com/thumbnail?id=1DVX7Oi0kMWvr7cEM_p3tRwlgxe1zZF6V&sz=w900",
+      "categoriaPadre": null,
+      "cantidadProductos": 4,
+      "orden": 1
+    }
+  ],
+  "colecciones": [
+    {
+      "id": "da3e57c0-f265-483b-a6ce-0c5c3cf2a601",
+      "slug": "dia-del-nino",
+      "nombre": "Día del Niño",
+      "descripcion": "Por pedido hasta el 10 de agosto.",
+      "imagen": "https://drive.google.com/thumbnail?id=1xu_y84q_h8bnwj2h9z4-lrgUD1bct98H&sz=w900",
+      "cantidadProductos": 1,
+      "url": "/colecciones/dia-del-nino"
+    },
+    {
+      "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+      "slug": "ofertas",
+      "nombre": "Ofertas",
+      "descripcion": "Valido hasta 31 de diciembre del 2030",
+      "imagen": "https://drive.google.com/thumbnail?id=1SEqOdvWdYMqQrWH_wIDwM74oo_t9sCr1&sz=w900",
+      "cantidadProductos": 3,
+      "url": "/colecciones/ofertas"
+    }
+  ],
+  "kits": {
+    "items": [
+      {
+        "id": "0d82c1a9-6e4d-4c42-82a6-86bb0a2f1bfd",
+        "slug": "kit-banderines",
+        "nombre": "Kit banderines",
+        "resumen": "Promo 3x2",
+        "imagenPrincipal": "https://drive.google.com/thumbnail?id=1bznQ5eN5-gUrsUOwbTkuLYw3HYj091vs&sz=w900",
+        "precio": {
+          "tipo": "Fijo",
+          "valor": 22000,
+          "moneda": "ARS"
+        },
+        "precioOriginal": 22000,
+        "ahorro": 0,
+        "porcentajeAhorro": 0,
+        "disponible": false,
+        "stock": 0,
+        "cantidadProductos": 2,
+        "cantidadUnidades": 2,
+        "url": "/kits/kit-banderines"
+      }
+    ],
+    "total": 1,
+    "url": "/kits"
+  },
+  "productos": [
+    {
+      "id": "4a300f9a-05f7-4c07-ae80-4d0d5ca2105a",
+      "slug": "banderin-animalitos-del-bosque",
+      "nombre": "Banderin Animalitos del Bosque",
+      "resumen": "Banderin Nombre",
+      "precio": {
+        "tipo": "Fijo",
+        "valor": 9500,
+        "moneda": "ARS"
+      },
+      "stock": null,
+      "destacado": false,
+      "orden": 0,
+      "categoria": {
+        "id": "CAT-6A526F82-1785157573000",
+        "nombre": "Banderines",
+        "slug": "banderines",
+        "url": "/categorias/banderines"
+      },
+      "imagenPrincipal": null,
+      "colecciones": [
+        {
+          "id": "da3e57c0-f265-483b-a6ce-0c5c3cf2a601",
+          "nombre": "Día del Niño",
+          "slug": "dia-del-nino"
+        },
+        {
+          "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+          "nombre": "Ofertas",
+          "slug": "ofertas"
+        }
+      ]
+    },
+    {
+      "id": "9c55bc26-2712-44cc-8016-97a8eca0dea2",
+      "slug": "banderin-boca-juniors",
+      "nombre": "Banderin Boca Juniors",
+      "resumen": "Banderin con nombre",
+      "precio": {
+        "tipo": "Fijo",
+        "valor": 9500,
+        "moneda": "ARS"
+      },
+      "stock": null,
+      "destacado": false,
+      "orden": 1,
+      "categoria": {
+        "id": "CAT-6A526F82-1785157573000",
+        "nombre": "Banderines",
+        "slug": "banderines",
+        "url": "/categorias/banderines"
+      },
+      "imagenPrincipal": "https://drive.google.com/thumbnail?id=1vpK-U85X7-75Osi90ABYjDveOnxSfjNG&sz=w900",
+      "colecciones": [
+        {
+          "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+          "nombre": "Ofertas",
+          "slug": "ofertas"
+        }
+      ]
+    },
+    {
+      "id": "7578328d-ec81-4349-9d3e-b27e501d5773",
+      "slug": "banderin-la-granja-de-zenon",
+      "nombre": "Banderin La Granja de Zenón",
+      "resumen": "Banderin Feliz cumple personalizado.",
+      "precio": {
+        "tipo": "Fijo",
+        "valor": 12500,
+        "moneda": "ARS"
+      },
+      "stock": null,
+      "destacado": false,
+      "orden": 3,
+      "categoria": {
+        "id": "CAT-6A526F82-1785157573000",
+        "nombre": "Banderines",
+        "slug": "banderines",
+        "url": "/categorias/banderines"
+      },
+      "imagenPrincipal": "https://drive.google.com/thumbnail?id=17BGS_H13h6UzCYCaaBxvfsKgUS2DYchN&sz=w900",
+      "colecciones": [
+        {
+          "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+          "nombre": "Ofertas",
+          "slug": "ofertas"
+        }
+      ]
+    },
+    {
+      "id": "7dfbc803-7e72-4530-a4aa-434f5e68c6fb",
+      "slug": "banderin-la-granja",
+      "nombre": "Banderin La Granja 🐷",
+      "resumen": "Banderin personalizado color pastel.",
+      "precio": {
+        "tipo": "Fijo",
+        "valor": 12500,
+        "moneda": "ARS"
+      },
+      "stock": null,
+      "destacado": false,
+      "orden": 11,
+      "categoria": {
+        "id": "CAT-6A526F82-1785157573000",
+        "nombre": "Banderines",
+        "slug": "banderines",
+        "url": "/categorias/banderines"
+      },
+      "imagenPrincipal": "https://drive.google.com/thumbnail?id=1p9LjJ9HWLqmxOImUwvZgcEFy4TKSZYf-&sz=w900",
+      "colecciones": []
+    }
+  ],
+  "detalles": {
+    "categorias": {
+      "banderines": {
+        "id": "CAT-6A526F82-1785157573000",
+        "slug": "banderines",
+        "nombre": "Banderines",
+        "descripcion": "",
+        "icono": "🎉",
+        "imagen": "https://drive.google.com/thumbnail?id=1DVX7Oi0kMWvr7cEM_p3tRwlgxe1zZF6V&sz=w900",
+        "categoriaPadre": null,
+        "cantidadProductos": 4,
+        "orden": 1,
+        "url": "/categoria/banderines"
+      }
+    },
+    "colecciones": {
+      "dia-del-nino": {
+        "id": "da3e57c0-f265-483b-a6ce-0c5c3cf2a601",
+        "slug": "dia-del-nino",
+        "nombre": "Día del Niño",
+        "resumen": "Por pedido hasta el 10 de agosto.",
+        "descripcion": "Pizarras de tus personajes preferidos.\n\n*Toy Story\n*Las mascotas del mundial\n*Guerreras K-pop\n*Stitch",
+        "imagen": "https://drive.google.com/thumbnail?id=1xu_y84q_h8bnwj2h9z4-lrgUD1bct98H&sz=w900",
+        "banner": "https://drive.google.com/thumbnail?id=152Vsw-gi6MJI97IJznohVWaDKLmDJ81P&sz=w900",
+        "cantidadProductos": 1,
+        "url": "/colecciones/dia-del-nino"
+      },
+      "ofertas": {
+        "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+        "slug": "ofertas",
+        "nombre": "Ofertas",
+        "resumen": "Valido hasta 31 de diciembre del 2030",
+        "descripcion": "",
+        "imagen": "https://drive.google.com/thumbnail?id=1SEqOdvWdYMqQrWH_wIDwM74oo_t9sCr1&sz=w900",
+        "banner": "https://drive.google.com/thumbnail?id=18RoNmQdiTURZATC1IqJ-EJGEWQ0YOHFo&sz=w900",
+        "cantidadProductos": 3,
+        "url": "/colecciones/ofertas"
+      }
+    },
+    "kits": {
+      "kit-banderines": {
+        "id": "0d82c1a9-6e4d-4c42-82a6-86bb0a2f1bfd",
+        "slug": "kit-banderines",
+        "nombre": "Kit banderines",
+        "resumen": "Promo 3x2",
+        "imagenPrincipal": "https://drive.google.com/thumbnail?id=1bznQ5eN5-gUrsUOwbTkuLYw3HYj091vs&sz=w900",
+        "precio": {
+          "tipo": "Fijo",
+          "valor": 22000,
+          "moneda": "ARS"
+        },
+        "precioOriginal": 22000,
+        "ahorro": 0,
+        "porcentajeAhorro": 0,
+        "disponible": false,
+        "stock": 0,
+        "cantidadProductos": 2,
+        "cantidadUnidades": 2,
+        "url": "/kits/kit-banderines",
+        "descripcion": "Promo 3x2, pagas 3 llevas 2 jaja.",
+        "moneda": "ARS",
+        "productos": [
+          {
+            "cantidad": 1,
+            "subtotal": 9500,
+            "item": {
+              "id": "4a300f9a-05f7-4c07-ae80-4d0d5ca2105a",
+              "slug": "banderin-animalitos-del-bosque",
+              "nombre": "Banderin Animalitos del Bosque",
+              "resumen": "Banderin Nombre",
+              "precio": {
+                "tipo": "Fijo",
+                "valor": 9500,
+                "moneda": "ARS"
+              },
+              "stock": null,
+              "destacado": false,
+              "orden": 0,
+              "categoria": {
+                "id": "CAT-6A526F82-1785157573000",
+                "nombre": "Banderines",
+                "slug": "banderines",
+                "url": "/categorias/banderines"
+              },
+              "imagenPrincipal": null
+            }
+          },
+          {
+            "cantidad": 1,
+            "subtotal": 12500,
+            "item": {
+              "id": "7578328d-ec81-4349-9d3e-b27e501d5773",
+              "slug": "banderin-la-granja-de-zenon",
+              "nombre": "Banderin La Granja de Zenón",
+              "resumen": "Banderin Feliz cumple personalizado.",
+              "precio": {
+                "tipo": "Fijo",
+                "valor": 12500,
+                "moneda": "ARS"
+              },
+              "stock": null,
+              "destacado": false,
+              "orden": 3,
+              "categoria": {
+                "id": "CAT-6A526F82-1785157573000",
+                "nombre": "Banderines",
+                "slug": "banderines",
+                "url": "/categorias/banderines"
+              },
+              "imagenPrincipal": "https://drive.google.com/thumbnail?id=17BGS_H13h6UzCYCaaBxvfsKgUS2DYchN&sz=w900"
+            }
+          }
+        ],
+        "consultaWhatsapp": {
+          "url": "https://wa.me/542932519421?text=Hola%2C%20quisiera%20consultar%20por%20el%20kit%20Kit%20banderines%20(referencia%3A%20kit-banderines)."
+        }
+      }
+    },
+    "productos": {
+      "banderin-animalitos-del-bosque": {
+        "id": "4a300f9a-05f7-4c07-ae80-4d0d5ca2105a",
+        "slug": "banderin-animalitos-del-bosque",
+        "nombre": "Banderin Animalitos del Bosque",
+        "resumen": "Banderin Nombre",
+        "descripcion": "Hasta 8 banderines personalizados con el nombre&nbsp;",
+        "precio": {
+          "tipo": "Fijo",
+          "valor": 9500,
+          "moneda": "ARS"
+        },
+        "stock": null,
+        "disponible": true,
+        "destacado": false,
+        "categoria": {
+          "id": "CAT-6A526F82-1785157573000",
+          "nombre": "Banderines",
+          "slug": "banderines",
+          "url": "/categorias/banderines"
+        },
+        "colecciones": [
+          {
+            "id": "da3e57c0-f265-483b-a6ce-0c5c3cf2a601",
+            "nombre": "Día del Niño",
+            "slug": "dia-del-nino",
+            "url": "/colecciones/dia-del-nino"
+          },
+          {
+            "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+            "nombre": "Ofertas",
+            "slug": "ofertas",
+            "url": "/colecciones/ofertas"
+          }
+        ],
+        "imagenPrincipal": null,
+        "galeria": null,
+        "atributos": [
+          {
+            "nombre": "Tamaño",
+            "clave": "tamano",
+            "tipo": "Texto",
+            "valor": "13 cm x 18 cm"
+          },
+          {
+            "nombre": "Material",
+            "clave": "material",
+            "tipo": "Texto",
+            "valor": "Papel Fotográfico"
+          }
+        ],
+        "modalidades": null,
+        "consultaWhatsapp": {
+          "url": "https://wa.me/542932519421?text=Hola%2C%20quisiera%20consultar%20por%20Banderin%20Animalitos%20del%20Bosque%20(referencia%3A%20banderin-animalitos-del-bosque)."
+        },
+        "relacionados": [
+          {
+            "id": "9c55bc26-2712-44cc-8016-97a8eca0dea2",
+            "slug": "banderin-boca-juniors",
+            "nombre": "Banderin Boca Juniors",
+            "resumen": "Banderin con nombre",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 9500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=1vpK-U85X7-75Osi90ABYjDveOnxSfjNG&sz=w900"
+          },
+          {
+            "id": "7578328d-ec81-4349-9d3e-b27e501d5773",
+            "slug": "banderin-la-granja-de-zenon",
+            "nombre": "Banderin La Granja de Zenón",
+            "resumen": "Banderin Feliz cumple personalizado.",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 12500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=17BGS_H13h6UzCYCaaBxvfsKgUS2DYchN&sz=w900"
+          },
+          {
+            "id": "7dfbc803-7e72-4530-a4aa-434f5e68c6fb",
+            "slug": "banderin-la-granja",
+            "nombre": "Banderin La Granja 🐷",
+            "resumen": "Banderin personalizado color pastel.",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 12500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=1p9LjJ9HWLqmxOImUwvZgcEFy4TKSZYf-&sz=w900"
+          }
+        ],
+        "kits": [
+          {
+            "id": "0d82c1a9-6e4d-4c42-82a6-86bb0a2f1bfd",
+            "slug": "kit-banderines",
+            "nombre": "Kit banderines",
+            "resumen": "Promo 3x2",
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=1bznQ5eN5-gUrsUOwbTkuLYw3HYj091vs&sz=w900",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 22000,
+              "moneda": "ARS"
+            },
+            "precioOriginal": 22000,
+            "ahorro": 0,
+            "porcentajeAhorro": 0,
+            "disponible": false,
+            "stock": 0,
+            "cantidadProductos": 2,
+            "cantidadUnidades": 2,
+            "url": "/kits/kit-banderines"
+          }
+        ]
+      },
+      "banderin-boca-juniors": {
+        "id": "9c55bc26-2712-44cc-8016-97a8eca0dea2",
+        "slug": "banderin-boca-juniors",
+        "nombre": "Banderin Boca Juniors",
+        "resumen": "Banderin con nombre",
+        "descripcion": "Hasta 8 banderines, en papel fotográfico.",
+        "precio": {
+          "tipo": "Fijo",
+          "valor": 9500,
+          "moneda": "ARS"
+        },
+        "stock": null,
+        "disponible": true,
+        "destacado": false,
+        "categoria": {
+          "id": "CAT-6A526F82-1785157573000",
+          "nombre": "Banderines",
+          "slug": "banderines",
+          "url": "/categorias/banderines"
+        },
+        "colecciones": [
+          {
+            "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+            "nombre": "Ofertas",
+            "slug": "ofertas",
+            "url": "/colecciones/ofertas"
+          }
+        ],
+        "imagenPrincipal": "https://drive.google.com/thumbnail?id=1vpK-U85X7-75Osi90ABYjDveOnxSfjNG&sz=w1600",
+        "galeria": null,
+        "atributos": [
+          {
+            "nombre": "Tamaño",
+            "clave": "tamano",
+            "tipo": "Texto",
+            "valor": "20 cm x 15 cm"
+          },
+          {
+            "nombre": "Material",
+            "clave": "material",
+            "tipo": "Texto",
+            "valor": "Papel Fotográfico"
+          }
+        ],
+        "modalidades": null,
+        "consultaWhatsapp": {
+          "url": "https://wa.me/542932519421?text=Hola%2C%20quisiera%20consultar%20por%20Banderin%20Boca%20Juniors%20(referencia%3A%20banderin-boca-juniors)."
+        },
+        "relacionados": [
+          {
+            "id": "4a300f9a-05f7-4c07-ae80-4d0d5ca2105a",
+            "slug": "banderin-animalitos-del-bosque",
+            "nombre": "Banderin Animalitos del Bosque",
+            "resumen": "Banderin Nombre",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 9500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": null
+          },
+          {
+            "id": "7578328d-ec81-4349-9d3e-b27e501d5773",
+            "slug": "banderin-la-granja-de-zenon",
+            "nombre": "Banderin La Granja de Zenón",
+            "resumen": "Banderin Feliz cumple personalizado.",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 12500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=17BGS_H13h6UzCYCaaBxvfsKgUS2DYchN&sz=w900"
+          },
+          {
+            "id": "7dfbc803-7e72-4530-a4aa-434f5e68c6fb",
+            "slug": "banderin-la-granja",
+            "nombre": "Banderin La Granja 🐷",
+            "resumen": "Banderin personalizado color pastel.",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 12500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=1p9LjJ9HWLqmxOImUwvZgcEFy4TKSZYf-&sz=w900"
+          }
+        ],
+        "kits": null
+      },
+      "banderin-la-granja-de-zenon": {
+        "id": "7578328d-ec81-4349-9d3e-b27e501d5773",
+        "slug": "banderin-la-granja-de-zenon",
+        "nombre": "Banderin La Granja de Zenón",
+        "resumen": "Banderin Feliz cumple personalizado.",
+        "descripcion": "",
+        "precio": {
+          "tipo": "Fijo",
+          "valor": 12500,
+          "moneda": "ARS"
+        },
+        "stock": null,
+        "disponible": true,
+        "destacado": false,
+        "categoria": {
+          "id": "CAT-6A526F82-1785157573000",
+          "nombre": "Banderines",
+          "slug": "banderines",
+          "url": "/categorias/banderines"
+        },
+        "colecciones": [
+          {
+            "id": "2dd20583-6619-4681-b0b4-68d6942a57d9",
+            "nombre": "Ofertas",
+            "slug": "ofertas",
+            "url": "/colecciones/ofertas"
+          }
+        ],
+        "imagenPrincipal": "https://drive.google.com/thumbnail?id=17BGS_H13h6UzCYCaaBxvfsKgUS2DYchN&sz=w1600",
+        "galeria": [
+          "https://drive.google.com/thumbnail?id=17JMTJAKZDAgd7er4kfxj6LqK_rMlR4MT&sz=w1600"
+        ],
+        "atributos": [
+          {
+            "nombre": "Material",
+            "clave": "material",
+            "tipo": "Texto",
+            "valor": "Papel Fotográfico"
+          }
+        ],
+        "modalidades": null,
+        "consultaWhatsapp": {
+          "url": "https://wa.me/542932519421?text=Hola%2C%20quisiera%20consultar%20por%20Banderin%20La%20Granja%20de%20Zen%C3%B3n%20(referencia%3A%20banderin-la-granja-de-zenon)."
+        },
+        "relacionados": [
+          {
+            "id": "4a300f9a-05f7-4c07-ae80-4d0d5ca2105a",
+            "slug": "banderin-animalitos-del-bosque",
+            "nombre": "Banderin Animalitos del Bosque",
+            "resumen": "Banderin Nombre",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 9500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": null
+          },
+          {
+            "id": "9c55bc26-2712-44cc-8016-97a8eca0dea2",
+            "slug": "banderin-boca-juniors",
+            "nombre": "Banderin Boca Juniors",
+            "resumen": "Banderin con nombre",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 9500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=1vpK-U85X7-75Osi90ABYjDveOnxSfjNG&sz=w900"
+          },
+          {
+            "id": "7dfbc803-7e72-4530-a4aa-434f5e68c6fb",
+            "slug": "banderin-la-granja",
+            "nombre": "Banderin La Granja 🐷",
+            "resumen": "Banderin personalizado color pastel.",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 12500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=1p9LjJ9HWLqmxOImUwvZgcEFy4TKSZYf-&sz=w900"
+          }
+        ],
+        "kits": [
+          {
+            "id": "0d82c1a9-6e4d-4c42-82a6-86bb0a2f1bfd",
+            "slug": "kit-banderines",
+            "nombre": "Kit banderines",
+            "resumen": "Promo 3x2",
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=1bznQ5eN5-gUrsUOwbTkuLYw3HYj091vs&sz=w900",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 22000,
+              "moneda": "ARS"
+            },
+            "precioOriginal": 22000,
+            "ahorro": 0,
+            "porcentajeAhorro": 0,
+            "disponible": false,
+            "stock": 0,
+            "cantidadProductos": 2,
+            "cantidadUnidades": 2,
+            "url": "/kits/kit-banderines"
+          }
+        ]
+      },
+      "banderin-la-granja": {
+        "id": "7dfbc803-7e72-4530-a4aa-434f5e68c6fb",
+        "slug": "banderin-la-granja",
+        "nombre": "Banderin La Granja 🐷",
+        "resumen": "Banderin personalizado color pastel.",
+        "descripcion": "Banderin personalizado con nombre.&nbsp;",
+        "precio": {
+          "tipo": "Fijo",
+          "valor": 12500,
+          "moneda": "ARS"
+        },
+        "stock": null,
+        "disponible": true,
+        "destacado": false,
+        "categoria": {
+          "id": "CAT-6A526F82-1785157573000",
+          "nombre": "Banderines",
+          "slug": "banderines",
+          "url": "/categorias/banderines"
+        },
+        "colecciones": null,
+        "imagenPrincipal": "https://drive.google.com/thumbnail?id=1p9LjJ9HWLqmxOImUwvZgcEFy4TKSZYf-&sz=w1600",
+        "galeria": null,
+        "atributos": [
+          {
+            "nombre": "Material",
+            "clave": "material",
+            "tipo": "Texto",
+            "valor": "Papel Fotográfico"
+          }
+        ],
+        "modalidades": null,
+        "consultaWhatsapp": {
+          "url": "https://wa.me/542932519421?text=Hola%2C%20quisiera%20consultar%20por%20Banderin%20La%20Granja%20%F0%9F%90%B7%20(referencia%3A%20banderin-la-granja)."
+        },
+        "relacionados": [
+          {
+            "id": "4a300f9a-05f7-4c07-ae80-4d0d5ca2105a",
+            "slug": "banderin-animalitos-del-bosque",
+            "nombre": "Banderin Animalitos del Bosque",
+            "resumen": "Banderin Nombre",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 9500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": null
+          },
+          {
+            "id": "9c55bc26-2712-44cc-8016-97a8eca0dea2",
+            "slug": "banderin-boca-juniors",
+            "nombre": "Banderin Boca Juniors",
+            "resumen": "Banderin con nombre",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 9500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=1vpK-U85X7-75Osi90ABYjDveOnxSfjNG&sz=w900"
+          },
+          {
+            "id": "7578328d-ec81-4349-9d3e-b27e501d5773",
+            "slug": "banderin-la-granja-de-zenon",
+            "nombre": "Banderin La Granja de Zenón",
+            "resumen": "Banderin Feliz cumple personalizado.",
+            "precio": {
+              "tipo": "Fijo",
+              "valor": 12500,
+              "moneda": "ARS"
+            },
+            "categoria": {
+              "id": "CAT-6A526F82-1785157573000",
+              "nombre": "Banderines",
+              "slug": "banderines",
+              "url": "/categorias/banderines"
+            },
+            "imagenPrincipal": "https://drive.google.com/thumbnail?id=17BGS_H13h6UzCYCaaBxvfsKgUS2DYchN&sz=w900"
+          }
+        ],
+        "kits": null
+      }
+    }
+  }
+}
