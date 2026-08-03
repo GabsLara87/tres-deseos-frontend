@@ -11,6 +11,19 @@ import { initImageLightbox } from "../../components/ImageLightbox.js";
 
 let handlingVersionChange = false;
 
+function restoreGithubPagesRoute() {
+  const savedRoute = sessionStorage.getItem("github-pages-spa-route");
+  if (!savedRoute) return;
+
+  sessionStorage.removeItem("github-pages-spa-route");
+  window.history.replaceState({}, "", savedRoute);
+}
+
+// GitHub Pages redirige las rutas internas mediante 404.html. Restauramos la
+// URL recién después de cargar este módulo y todas sus dependencias, para que
+// los archivos relativos se resuelvan desde la raíz real de la aplicación.
+restoreGithubPagesRoute();
+
 async function refreshCurrentViewAfterVersionChange() {
   if (handlingVersionChange) return;
   handlingVersionChange = true;
