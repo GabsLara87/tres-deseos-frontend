@@ -70,7 +70,13 @@ export async function mountColeccionesView() {
 
     try {
       const data = await collectionStore.loadAll();
-      const items = Array.isArray(data?.items) ? data.items : [];
+      // Acepta el contrato actual { items: [...] } y también el arreglo directo
+      // que pudo quedar guardado en sessionStorage por una versión anterior.
+      const items = Array.isArray(data)
+        ? data
+        : Array.isArray(data?.items)
+          ? data.items
+          : [];
 
       if (!items.length) {
         results.innerHTML = `

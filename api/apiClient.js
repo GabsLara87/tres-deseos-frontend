@@ -96,11 +96,7 @@ function resolveRoute(catalog, route, params) {
   if (route === "categorias") return catalog.categorias || [];
   if (route === "colecciones") {
     const items = Array.isArray(catalog.colecciones) ? catalog.colecciones : [];
-    return {
-      items,
-      total: items.length,
-      url: "/colecciones",
-    };
+    return { items, total: items.length, url: "/colecciones" };
   }
   if (route === "kits") return filterKits(catalog.kits, params);
   if (route === "productos") return filterProducts(catalog.productos || [], params);
