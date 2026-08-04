@@ -662,6 +662,7 @@
 .kit-component-row {
   position: relative;
   min-width: 0;
+  height: 100%;
 }
 
 .kit-component-quantity {
@@ -678,15 +679,26 @@
   font-weight: 900;
 }
 
+.kit-component-card {
+  height: 100%;
+}
+
 .kit-component-card .product-card {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
 .kit-component-card .product-image {
+  flex: 0 0 180px;
+  height: 180px;
   min-height: 180px;
 }
 
 .kit-component-card .product-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 0.85rem;
 }
 
@@ -697,6 +709,10 @@
 .kit-component-card .product-summary {
   min-height: auto;
   margin-bottom: 0.7rem;
+}
+
+.kit-component-card .product-footer {
+  margin-top: auto;
 }
 
 .compact-kit-grid {
