@@ -169,7 +169,9 @@ function renderProduct(product) {
               <p class="eyebrow">También pueden interesarte</p>
               <h2 class="section-title">Productos relacionados</h2>
             </div>
-            <div class="product-grid">${product.relacionados.map(ProductCard).join("")}</div>
+            <div class="product-grid">${product.relacionados
+              .map((relatedProduct) => ProductCard(relatedProduct, { imageLinksToDetail: true }))
+              .join("")}</div>
           </section>`
         : ""
     }
